@@ -4,7 +4,6 @@ var ms = 0,
 var timer;
 
 var stopwatchEl = document.querySelector(".stopwatch");
-var lapsContainer = document.querySelector(".laps");
 
 function start() {
   if (!timer) {
@@ -57,14 +56,3 @@ function restart() {
   start();
 }
 
-function lap() {
-  if (timer) {
-    var li = document.createElement("li");
-    li.innerText = getTimer();
-    lapsContainer.appendChild(li);
-  }
-}
-
-function resetLaps() {
-  lapsContainer.innerHTML = "";
-}
