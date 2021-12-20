@@ -1,5 +1,5 @@
 body {
-  background-color: #2d2d2d;
+  background-image: linear-gradient(blue , rgb(233, 127, 192));
   color: white;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,6 @@ body {
 }
 
 .stopwatch {
-  font-size: 15em;
+  font-size: 18em;
   font-family: monospace;
 }
