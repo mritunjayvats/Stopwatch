@@ -1,11 +1,14 @@
-var ms = 0,
-  s = 0,
-  m = 0;
-var timer;
+var ms = 0,  // contain the miliseconds of the timer
+  s = 0,     // contain the seconds of the timer
+  m = 0;     // contain the minutes of the timer
+var timer;   // show the time
+
+
+// accessing the display timer div
 
 var stopwatchEl = document.querySelector(".stopwatch");
 
-//  Mathod to start the watch 
+//  Mathod to start the watch timer 
 
 function start() {
   if (!timer) {
