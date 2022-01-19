@@ -1,6 +1,7 @@
 var ms = 0,  // contain the miliseconds of the timer
   s = 0,     // contain the seconds of the timer
-  m = 0;     // contain the minutes of the timer
+  m = 0, 
+  hr =0;    // contain the minutes of the timer
 var timer;   // show the time
 
 
@@ -16,6 +17,8 @@ function start() {
   }
 }
 
+//method to run the timer and update the value of the timer
+
 function run() {
   stopwatchEl.textContent = getTimer();
   ms++;
@@ -26,6 +29,10 @@ function run() {
   if (s == 60) {
     s = 0;
     m++;
+  }
+  if (m == 60) {
+    m = 0;
+    hr++;
   }
 }
 
@@ -38,16 +45,21 @@ function pause() {
 // method to stop the watch
 
 function stop() {
+
+  // 
   stopTimer();
   ms = 0;
   s = 0;
   m = 0;
+  hr = 0;
   stopwatchEl.textContent = getTimer();
 }
 
 // common method to stop the watch and clear the timer interval
 
 function stopTimer() {
+
+  // clearing the previous interval from timer and making the value of timer false
   clearInterval(timer);
   timer = false;
 }
@@ -56,6 +68,9 @@ function stopTimer() {
 
 function getTimer() {
   return (
+    // conditions to get the time in a particular format 
+    (hr < 10 ? "0" + hr : hr) +
+    ":" +
     (m < 10 ? "0" + m : m) +
     ":" +
     (s < 10 ? "0" + s : s) +

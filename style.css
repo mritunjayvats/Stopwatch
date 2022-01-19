@@ -9,6 +9,7 @@ body {
 }
 
 .stopwatch {
-  font-size: 18em;
+  color: aliceblue;
+  font-size: 15em;
   font-family: monospace;
 }
